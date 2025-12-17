@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="scripts/script.js"></script>
 </head>
 <body>
-    
+    <h1>Zaznamenat dochazku</h1>
+    <form id="attendanceForm">
+        <label for="employeeId">ID Zaměstnance:</label>
+        <input type="text" id="employeeId" name="employeeId" required>
+        <br><br>
+        <label for="date">Datum:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+        <label for="status">Stav:</label>
+        <select id="status" name="status" required>
+            <option value="present">Přítomen</option>
+            <option value="absent">Nepřítomen</option>
+            <option value="late">Pozdě</option>
+        </select>
+        <br><br>
+        <button type="submit">Odeslat</button>
+    </form>
+
 </body>
 </html>
