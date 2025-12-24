@@ -1,34 +1,33 @@
-let ArrayemployeeId = new Array(256);
-let ArrayemployeeIdCount = new Array(256);
-//256 moznych id zamestnancu
-//pozdeji pridat kontrolu na maximalni pocet zamestnancu
-let Max=256;
-let promenna=0;
-//256 zaznamu na jedno id zamestnance
-//celkem 65536 zaznamu
-//pozdeji pridat kontrolu na maximalni pocet zaznamu na jedno id zamestnance
-//a pridat cele smazani dat
-//a popup ze se vsechno smazalo a ze maji smulu
-let Arraystatus = new Array(65536);
-let Arraydate = new Array(65536);
-
+let zaznamy = [];
 
 document.addEventListener('DOMContentLoaded', function() {
-    const attendanceForm = document.getElementById('attendance-form');
-    attendanceForm.addEventListener('submit', function(event) {
+    const formularDochazky = document.getElementById('formularDochazky');
+    formularDochazky.addEventListener('submit', function(event) {
         event.preventDefault();
-        const employeeId = document.getElementById('employee-id').value;
-        const date = document.getElementById('date').value;
-        const status_temp = document.getElementById('status').value;
-        console.log(`Employee ID: ${employeeId}, Date: ${date}, Status: ${status_temp}`);
-        ArrayemployeeId[promenna]=employeeId;
-        ArrayemployeeIdCount[employeeId]=+1;
-        Arraystatus[256*employeeId+ArrayemployeeIdCount[employeeId]]=status_temp;
-        Arraydate[256*employeeId+ArrayemployeeIdCount[employeeId]]=date;
-        promenna++;
+        const idZamestnance = document.getElementById('idZamestnance').value;
+        const datum = document.getElementById('datum').value;
+        const stavTemp = document.getElementById('stav').value;
+        console.log(`Employee ID: ${idZamestnance}, Date: ${datum}, Status: ${stavTemp}`);
+        zaznamy.push({ idZamestnance, datum, stav: stavTemp });
 
         alert('Docházka zaznamenána!');
-        attendanceForm.reset();
+        formularDochazky.reset();
+
+        aktualizovatTabulku();
     });
-    
+
+    function aktualizovatTabulku() {
+        const tabulkaDochazky = document.querySelector('.tabulka-dochazky');
+        if (tabulkaDochazky) {
+            let htmlTabulky = '<table border="1"><tr><th>ID Zaměstnance</th><th>Datum</th><th>Stav</th></tr>';
+            for (let zaznam of zaznamy) {
+                htmlTabulky += `<tr><td>${zaznam.idZamestnance}</td><td>${zaznam.datum}</td><td>${zaznam.stav}</td></tr>`;
+            }
+            htmlTabulky += '</table>';
+            tabulkaDochazky.innerHTML = htmlTabulky;
+        }
+    }
+
+    // Initial table display
+    aktualizovatTabulku();
 });

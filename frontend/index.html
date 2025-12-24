@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <h1>Dobrý den, co si přejete</h1>
@@ -12,8 +12,28 @@
         <div class="grid-item">
             <a href="pages/LogAttendance.html">Zaznamenat dochazku</a>
         </div>
+        <h1>Zaznamenat dochazku</h1>
+        <form id="formularDochazky">
+        <label for="idZamestnance">ID Zaměstnance:</label>
+        <input type="text" id="idZamestnance" name="idZamestnance" required>
+        <br><br>
+        <label for="datum">Datum:</label>
+        <input type="date" id="datum" name="datum" required>
+        <br><br>
+        <label for="stav">Stav:</label>
+        <select id="stav" name="stav" required>
+            <option value="Pritomen">Přítomen</option>
+            <option value="Nepritomen">Nepřítomen</option>
+            <option value="Pozde">Pozdě</option>
+        </select>
+        <br><br>
+        <button type="submit">Odeslat</button>
+        </form>
         <div class="grid-item">
             <a href="pages/ViewAttendance.html">Zobrazit dochazku</a>
+        </div>
+        <div class="tabulka-dochazky">
+
         </div>
         <div class="grid-item">
             <div class="smaller">
