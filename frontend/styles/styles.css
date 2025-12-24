@@ -1,0 +1,47 @@
+.nazev {
+    font-size: 300%;
+    text-align: center;
+
+}
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+.podnazev {
+    font-size: 100%;
+    text-align: center;
+}
+.zapisovaci-formular {
+    text-align: center;
+    font-size: 150%;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header header"
+        "form form . table table"
+        "form form . table table"
+        "form form . table table"
+        "form form . table table";
+    gap: 8px;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.form-container {
+    grid-area: form;
+}
+
+.table-container {
+    grid-area: table;
+}
+    
+
+        
