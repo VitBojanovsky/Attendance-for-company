@@ -7,6 +7,7 @@ body {
     background-color: black;
     color: white;
     height: 100vh;
+    font-family: "Zalando Sans Expanded", sans-serif
 }
 .podnazev {
     font-size: 100%;
@@ -17,6 +18,7 @@ body {
     font-size: 150%;
 }
 
+    /* css grid designer - cssgridgenerator.io */
 .parent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -42,6 +44,3 @@ body {
 .table-container {
     grid-area: table;
 }
-    
-
-        
