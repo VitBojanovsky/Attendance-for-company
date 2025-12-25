@@ -1,0 +1,15 @@
+name: Deploy to Raspberry Pi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger deploy webhook
+        run: |
+          curl -f -X POST https://githubactions.smizek.com/hooks/deploy
