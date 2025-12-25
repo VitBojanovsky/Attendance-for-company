@@ -68,17 +68,17 @@ jobs:
         run: |
           curl -X POST //your forwarded address from cloudflare//
 ```
-###Host a Website
+### Host a Website
 and now for the last 3 steps
   Host the website
   ```
     cd /var/www/html
     python3 -m http.server 8765
 ```
-###Forward the site with Cloudflare tunnel (again but this time the actual website)
+### Forward the site with Cloudflare tunnel (again but this time the actual website)
   Forward this port with cloudflare tunnel and now you have a website
 
-###Most important step
+### Most important step
     Feel slightly supperior 
 
 
