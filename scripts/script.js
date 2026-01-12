@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initial table display
+    
     aktualizovatTabulku();
 });
