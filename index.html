@@ -12,34 +12,20 @@
 </head>
 <body>
     
-    <div class="parent">
-        <div class="header">
-            <h1 class="nazev">Dobrý den, co si přejete</h1>
+    
+    <div class="header">
+        <h1 class="nazev">Dobrý den, co si přejete</h1>
+    </div>
+    </div>
+    <div class="kontejner-vyberu">
+        <div class="moznosti-container">
+            <a href="LogAttendance.html">Zaznamenat dochazku</a>
         </div>
-        <div class="form-container">
-            <h1 class="podnazev">Zaznamenat docházku</h1>
-            <div class="zapisovaci-formular">
-                <form id="formularDochazky">
-                    <label for="idZamestnance">ID Zaměstnance:</label>
-                    <input type="text" id="idZamestnance" name="idZamestnance" required>
-                    <br><br>
-                    <label for="datum">Datum:</label>
-                    <input type="date" id="datum" name="datum" required>
-                    <br><br>
-                    <label for="stav">Stav:</label>
-                    <select id="stav" name="stav" required>
-                        <option value="Pritomen">Přítomen</option>
-                        <option value="Nepritomen">Nepřítomen</option>
-                        <option value="Pozde">Pozdě</option>
-                    </select>
-                    <br><br>
-                    <button type="submit">Odeslat</button>
-                </form>
-            </div>
+        <div class="moznosti-container">
+            <a href="ViewAttendance.html">Zobrazit dochazku</a>
         </div>
-        <div class="table-container">
-            <div class="tabulka-dochazky">
-            </div>
+        <div class="moznosti-container">
+            <a href="Admin.html">Admin</a>
         </div>
     </div>
 </body>

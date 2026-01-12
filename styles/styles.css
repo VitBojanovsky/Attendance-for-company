@@ -5,7 +5,7 @@
 }
 body {
     background-color: black;
-    color: white;
+    color: #e8e6e3;
     height: 100vh;
     font-family: "Zalando Sans Expanded", sans-serif
 }
@@ -33,9 +33,6 @@ body {
     height: 100vh;
 }
 
-.header {
-    grid-area: header;
-}
 
 .form-container {
     grid-area: form;
@@ -43,4 +40,26 @@ body {
 
 .table-container {
     grid-area: table;
+}
+
+/*styly pro main page*/
+.moznosti-container { /*child*/
+    text-align: center;
+    font-size: 365%;
+    margin-top: 20px;
+    color: white;
+    padding: 3vh;;
+    
+}
+.kontejner-vyberu { /*parent*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    gap: 20px;
+}
+.a{
+    color: #3391ff;
+    text-decoration: none;
 }
