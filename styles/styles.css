@@ -1,65 +1,50 @@
-.nazev {
-    font-size: 300%;
-    text-align: center;
-
-}
+/*inspirace designu z https://templatemo.com/tm-593-personal-shape*/
 body {
-    background-color: black;
-    color: #e8e6e3;
-    height: 100vh;
-    font-family: "Zalando Sans Expanded", sans-serif
-}
-.podnazev {
-    font-size: 100%;
-    text-align: center;
-}
-.zapisovaci-formular {
-    text-align: center;
-    font-size: 150%;
-}
-
-    /* css grid designer - cssgridgenerator.io */
-.parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "header header header header header"
-        "form form . table table"
-        "form form . table table"
-        "form form . table table"
-        "form form . table table";
-    gap: 8px;
-    height: 100vh;
-}
-
-
-.form-container {
-    grid-area: form;
-}
-
-.table-container {
-    grid-area: table;
-}
-
-/*styly pro main page*/
-.moznosti-container { /*child*/
-    text-align: center;
-    font-size: 365%;
-    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
     color: white;
-    padding: 3vh;;
-    
-}
-.kontejner-vyberu { /*parent*/
+    font-size: 200%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 70vh;
-    gap: 20px;
+    align-items: center;
 }
-.a{
-    color: #3391ff;
+.kontejner-vyberu {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    width: max-content;
+    font-size: 120%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+.moznosti-container {
     text-decoration: none;
+    margin: 25px;
+    
+
+}
+a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    letter-spacing: 0.5px;
+}
+
+a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+a:active {
+    transform: translateY(0);
 }

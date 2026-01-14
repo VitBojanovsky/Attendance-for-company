@@ -1,0 +1,178 @@
+/*inspirace designu z https://templatemo.com/tm-593-personal-shape*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.sprava-dochazky {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#spravaDochazkyForm button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 1em;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+#spravaDochazkyForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+#spravaDochazkyForm button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.smazatZaznam {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 8px 14px;
+    font-size: 0.85em;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+}
+
+.smazatZaznam:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.smazatZaznam:active {
+    transform: translateY(0);
+}
+
+#pridatZaznam {
+    background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 1em;
+    box-shadow: 0 4px 15px rgba(81, 207, 102, 0.3);
+}
+
+#pridatZaznam:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+}
+
+#pridatZaznam:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .sprava-dochazky {
+        padding: 20px;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
