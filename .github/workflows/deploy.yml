@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Trigger deploy webhook
         run: |
-          curl -f -X POST ${{ secrets.DEPLOY_WEBHOOK_URL_LOG }}
+          curl -f -X POST "https://githubactions.smizek.com/hooks/deploy-log-attendance"
